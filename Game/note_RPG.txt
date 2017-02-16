@@ -1,0 +1,94 @@
+
+    /* Général
+    ============*/
+
+• Pourquoi avoir 1 projet Eclipse imbriqué dans un autre ? (Game et RPG)
+
+• Pour la doc de ton projet, préfère les formats libres et/ou universels
+    genre .odt .pdf voire .txt (c'est con et primitif mais ca pèse pas lourd)
+    le .docx est carrément à éviter en gros
+
+• Eclipse gère les TODO avec l'onglet Tasks
+    // TO DO -> // TODO
+
+• Découpe en packages ?
+    https://www.tutorialspoint.com/java/java_packages.htm
+    "It is a good practice to group related classes implemented by you
+    so that a programmer can easily determine
+    that the classes, interfaces, enumerations, and annotations are related."
+
+• Ctrl+Shift+L ;)
+    Je trouve les if() ... sur une ligne particulièrement moches :/
+    
+• Je suis tombé sur ca : http://www.sonarqube.org/
+    Un outil de check de code
+
+	--> bien plus tard
+• Serialisation pour sauvegarder/charger une partie
+    Implique l'implémentation de Serializable par les objets à save/load
+    
+    /* Classes
+    ============*/
+
+    • Arme
+
+- TO THINK ABOUT -> TODO
+    Histoire de retrouver tes notes plus facilement via Eclipse ?
+
+- Les types possibles devraient être contenus dans un enum
+    public static enum types { EPEE, LANCE, HACHE };
+    Arme arme = new Arme("nom", 10, 10, 12, Arme.Type.EPEE, 5, 100);
+    // Javadoc https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html
+    // Enum vs final static fields http://stackoverflow.com/a/9969723
+
+- public Arme(...)
+    IllegalArgument ?
+
+- toString()
+    Avec un StringBuilder -> organisation, lisibilité
+    et on évite de créer des String supplémentaires.
+    
+    Pour le line feed, préférer System.lineSeparator()
+    A stocker dans une classe utilitaire comme constance ?
+
+	public String toString() {
+		
+		final String LINE_SEPARATOR = System.lineSeparator();
+
+		StringBuilder builder = new StringBuilder();
+		
+		builder.append(type.name());
+		builder.append(LINE_SEPARATOR);
+		
+		builder.append("Degat : ");
+		builder.append(degat);
+		builder.append(LINE_SEPARATOR);
+		
+		builder.append("Precision : ");
+		builder.append(precision + "%");
+		builder.append(LINE_SEPARATOR);
+		
+		builder.append("Critique : ");
+		builder.append(critique + "%");
+		builder.append(LINE_SEPARATOR);
+		
+		builder.append("Type : ");
+		builder.append(type);
+		builder.append(LINE_SEPARATOR);
+		
+		builder.append("Portee :");
+		builder.append(portee);
+		builder.append(LINE_SEPARATOR);
+		
+		builder.append(prix);
+		builder.append(" PO");
+		builder.append(LINE_SEPARATOR);
+		
+		return builder.toString();
+	}
+    
+• Combat
+
+- Il serait mieux de la rendre final pour empecher son extension et de définir un constructeur privé vide
+
+- 
