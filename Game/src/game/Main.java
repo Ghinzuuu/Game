@@ -13,12 +13,12 @@ class Main {
 	/**
 	 * DISCUSSION
 	 * 
-	 * Pour le moment le Game n'offre pas un large choix de décisions stratégiques. De plus son ergonomie est assez déplaisante. 
-	 * En fait, mon effort a été de créer le plus vite possible qqch de "jouable" sur lequel il sera plus ou moins facile d'ajouter 
-	 * des fonctionnalités (voir IDEA TO IMPROVE THIS GAME), selon mon temps libre, et les gens qui auront décider de me donner 
-	 * un coup de main, afin de rendre le jeu de + en + intéressant. 
+	 * Pour le moment le Game n'offre pas un large choix de dÃ©cisions stratÃ©giques. De plus son ergonomie est assez dÃ©plaisante. 
+	 * En fait, mon effort a Ã©tÃ© de crÃ©er le plus vite possible qqch de "jouable" sur lequel il sera plus ou moins facile d'ajouter 
+	 * des fonctionnalitÃ©s (voir IDEA TO IMPROVE THIS GAME), selon mon temps libre, et les gens qui auront dÃ©cider de me donner 
+	 * un coup de main, afin de rendre le jeu de + en + intÃ©ressant. 
 	 * 
-	 * J'ai bon espoir d'arriver à un jeu "chouette et amusant", l'objectif ultime étant d'arriver à avoir le fun d'un 
+	 * J'ai bon espoir d'arriver Ã  un jeu "chouette et amusant", l'objectif ultime Ã©tant d'arriver Ã  avoir le fun d'un 
 	 * Free For All, style Worms Armaggedon avec ce "Fire Emblem"-like. 
 	 * 
 	 * ----------------------------------------------------------------------------------------------------------------------------
@@ -26,7 +26,7 @@ class Main {
 	 * KNOWN BUGS
 	 * 
 	 * 1) Les combattants adverses ne font pas mur, on peut passer au travers
-	 * 2) Possibilié de sortir du shop sans avoir acheté d'arme
+	 * 2) PossibiliÃ© de sortir du shop sans avoir achetÃ© d'arme
 	 * 
 	 * ----------------------------------------------------------------------------------------------------------------------------
 	 * 
@@ -35,23 +35,23 @@ class Main {
 	 * montrer les stats du guerrier des le recrutement
 	 * Changer l'arme dans l'inventaire via le menu action
 	 * selectionner combattant en entrant son nom pion
-	 * Implémenter plus d'arme (arme létale (%crit)) 
+	 * ImplÃ©menter plus d'arme (arme lÃ©tale (%crit)) 
 	 * 
-	 * Implémenter le système de "talents"
-	 * Faire des armes avec différentes portées (arc)
-	 * Faire un système de sauvegarde en SQL
-	 * Implémenter la magie + soins
-	 * Implémenter des dgt de zones
-	 * Faire des coffres-fort, qui contiendraient différents type d'objet 
+	 * ImplÃ©menter le systÃ¨me de "talents"
+	 * Faire des armes avec diffÃ©rentes portÃ©es (arc)
+	 * Faire un systÃ¨me de sauvegarde en SQL
+	 * ImplÃ©menter la magie + soins
+	 * ImplÃ©menter des dgt de zones
+	 * Faire des coffres-fort, qui contiendraient diffÃ©rents type d'objet 
 	 * 
-	 * Creer une classe "Texte" qui "égaiera" notament les dialogues de la classe combats, générant de manière aléatoire du texte
-	 * préécris. Ce sera l'occasion de faire de l'humour xD
+	 * Creer une classe "Texte" qui "Ã©gaiera" notament les dialogues de la classe combats, gÃ©nÃ©rant de maniÃ¨re alÃ©atoire du texte
+	 * prÃ©Ã©cris. Ce sera l'occasion de faire de l'humour xD
 	 * 
 	 * ----------------------------------------------------------------------------------------------------------------------------
 	 * 
 	 * DEBUGGING
 	 * 
-	 * faire un gameDebug avec ses paramètres déjà initialisés (done)
+	 * faire un gameDebug avec ses paramÃ¨tres dÃ©jÃ  initialisÃ©s (done)
 	 * 
 	 */
 	
@@ -60,6 +60,8 @@ class Main {
 	
 		Game game = new Game();
  		game.affichageGame();
+		
+		System.out.println("La modif super originale d'Alex");
 		
 //		Troupe[] troupes = new Troupe[2];
 //		for (int i = 0; i < 2; i++) {
@@ -77,9 +79,9 @@ class Main {
 	
 	private static Game debugGame(){
 		
-		// le code ci dessous sert au debugging --> il crée un jeu sans que l'utilisateur doivent initialiser ses paramètres
-		// le jeu créé est une map 9x9 sur laquelle 2 joueurs ayant 2 combattants s'affrontent 
-		// les combattant du joueur 1 sont mieux équipés que ceux du joueurs 2
+		// le code ci dessous sert au debugging --> il crÃ©e un jeu sans que l'utilisateur doivent initialiser ses paramÃ¨tres
+		// le jeu crÃ©Ã© est une map 9x9 sur laquelle 2 joueurs ayant 2 combattants s'affrontent 
+		// les combattant du joueur 1 sont mieux Ã©quipÃ©s que ceux du joueurs 2
 		Game debugGame = new Game();
 		// base init
 		debugGame.setNbJoueurs(2);
